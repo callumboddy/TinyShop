@@ -12,8 +12,11 @@
 		C18A814620A1C9620013A4FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C18A814420A1C9620013A4FD /* Main.storyboard */; };
 		C18A814820A1C9640013A4FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C18A814720A1C9640013A4FD /* Assets.xcassets */; };
 		C18A814B20A1C9640013A4FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C18A814920A1C9640013A4FD /* LaunchScreen.storyboard */; };
-		C18A815620A1C9650013A4FD /* TinyShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18A815520A1C9650013A4FD /* TinyShopTests.swift */; };
 		C18A816120A1C9650013A4FD /* TinyShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18A816020A1C9650013A4FD /* TinyShopUITests.swift */; };
+		C18A817220A1C9D00013A4FD /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18A817120A1C9D00013A4FD /* Basket.swift */; };
+		C18A817520A1D4240013A4FD /* ProductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18A817420A1D4240013A4FD /* ProductTests.swift */; };
+		C18A817720A1D42E0013A4FD /* BasketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18A817620A1D42E0013A4FD /* BasketTests.swift */; };
+		C18A817920A1D4420013A4FD /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18A817820A1D4420013A4FD /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +45,14 @@
 		C18A814A20A1C9640013A4FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C18A814C20A1C9640013A4FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C18A815120A1C9650013A4FD /* TinyShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinyShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C18A815520A1C9650013A4FD /* TinyShopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyShopTests.swift; sourceTree = "<group>"; };
 		C18A815720A1C9650013A4FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C18A815C20A1C9650013A4FD /* TinyShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinyShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C18A816020A1C9650013A4FD /* TinyShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyShopUITests.swift; sourceTree = "<group>"; };
 		C18A816220A1C9650013A4FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C18A817120A1C9D00013A4FD /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
+		C18A817420A1D4240013A4FD /* ProductTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTests.swift; sourceTree = "<group>"; };
+		C18A817620A1D42E0013A4FD /* BasketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTests.swift; sourceTree = "<group>"; };
+		C18A817820A1D4420013A4FD /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,8 @@
 		C18A813F20A1C9620013A4FD /* TinyShop */ = {
 			isa = PBXGroup;
 			children = (
+				C18A816F20A1C9B10013A4FD /* ViewControllers */,
+				C18A816E20A1C9A90013A4FD /* Model */,
 				C18A814020A1C9620013A4FD /* AppDelegate.swift */,
 				C18A814220A1C9620013A4FD /* ViewController.swift */,
 				C18A814420A1C9620013A4FD /* Main.storyboard */,
@@ -110,8 +118,9 @@
 		C18A815420A1C9650013A4FD /* TinyShopTests */ = {
 			isa = PBXGroup;
 			children = (
-				C18A815520A1C9650013A4FD /* TinyShopTests.swift */,
 				C18A815720A1C9650013A4FD /* Info.plist */,
+				C18A817420A1D4240013A4FD /* ProductTests.swift */,
+				C18A817620A1D42E0013A4FD /* BasketTests.swift */,
 			);
 			path = TinyShopTests;
 			sourceTree = "<group>";
@@ -123,6 +132,22 @@
 				C18A816220A1C9650013A4FD /* Info.plist */,
 			);
 			path = TinyShopUITests;
+			sourceTree = "<group>";
+		};
+		C18A816E20A1C9A90013A4FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C18A817120A1C9D00013A4FD /* Basket.swift */,
+				C18A817820A1D4420013A4FD /* Product.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C18A816F20A1C9B10013A4FD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +280,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C18A817220A1C9D00013A4FD /* Basket.swift in Sources */,
+				C18A817920A1D4420013A4FD /* Product.swift in Sources */,
 				C18A814320A1C9620013A4FD /* ViewController.swift in Sources */,
 				C18A814120A1C9620013A4FD /* AppDelegate.swift in Sources */,
 			);
@@ -264,7 +291,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C18A815620A1C9650013A4FD /* TinyShopTests.swift in Sources */,
+				C18A817720A1D42E0013A4FD /* BasketTests.swift in Sources */,
+				C18A817520A1D4240013A4FD /* ProductTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
