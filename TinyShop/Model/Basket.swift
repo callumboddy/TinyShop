@@ -51,9 +51,27 @@ final class Basket {
         self.items.removeAll()
     }
 
+    func quantity(for product: Product) -> Int {
+        guard let item = items.filter({ $0.product.identifier == product.identifier}).first else { return 0 }
+        return item.quantity
+    }
+
+    func price(for product: Product) -> Double {
+        guard let item = items.filter({ $0.product.identifier == product.identifier}).first else { return 0 }
+        return item.product.price * Double(item.quantity)
+    }
+
     func totalPrice() -> Double {
         return items.reduce(0, { (result, item) -> Double in
             return result + (item.product.price * Double(item.quantity))
         })
     }
+
+    func totalQunatity() -> Int {
+        return items.reduce(0, { (result, item) -> Int in
+            return result + item.quantity
+        })
+    }
+
+
 }
