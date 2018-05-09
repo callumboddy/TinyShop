@@ -38,8 +38,9 @@ class ProductListViewController: UIViewController {
 
         Currency.allValues.forEach { currency in
             let action = UIAlertAction(title: "\(currency.icon) - \(currency.displayName)", style: .default, handler: { (action) in
+                self.editCurrencyButton.titleLabel?.text = currency.icon
                 self.currentCurrency = currency
-                currencyConverter.value(for: currentCurrency) { (rate, error) in
+                self.currencyConverter.value(for: self.currentCurrency) { (rate, error) in
                     self.currentRate = rate
                     DispatchQueue.main.async {
                         self.reloadData()
@@ -59,18 +60,14 @@ class ProductListViewController: UIViewController {
             self.view.layoutIfNeeded()
         }
 
-
-        let totalPrice = PriceFormatter.price(self.basket.totalPrice(), to: self.currentCurrency, at: rate)
+        let totalPrice = PriceFormatter.price(self.basket.totalPrice(), to: self.currentCurrency, at: currentRate)
         let state = ProductListCheckoutFooter.State(totalPrice: totalPrice, totalNumberOfItems: self.basket.totalQunatity())
         self.productListCheckoutFooter.render(state: state)
         self.collectionView.reloadData()
 
     }
 
-    editCurrencyButton.titleLabel?.text = currentCurrency.icon
 }
-}
-
 
 extension ProductListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -84,7 +81,8 @@ extension ProductListViewController: UICollectionViewDataSource {
 
         let product = products[indexPath.row]
         let quantity = basket.quantity(for: product)
-        let state = ProductListCollectionViewCell.State(title: product.name, subtitle: product.size, image: product.image, price: product.displayPrice(), quantity: quantity)
+        let price = PriceFormatter.price(product.price, to: currentCurrency, at: currentRate)
+        let state = ProductListCollectionViewCell.State(title: product.name, subtitle: product.size, image: product.image, price: price, quantity: quantity)
         cell.render(state: state, animated: false)
         cell.delegate = self
 

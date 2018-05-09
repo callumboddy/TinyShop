@@ -54,7 +54,7 @@ enum Currency: String {
         case .GBP:
             return "£"
         case .CHF:
-            return "CHF"
+            return "CHF "
         case .EUR:
             return "€"
         }
