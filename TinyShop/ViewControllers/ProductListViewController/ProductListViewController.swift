@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 fileprivate let products = [
     Product(name: "Peas", price: 0.95, image: #imageLiteral(resourceName: "peas"), size: "bag"),
     Product(name: "Eggs", price: 2.1, image: #imageLiteral(resourceName: "eggs"), size: "dozen"),
@@ -22,9 +23,7 @@ class ProductListViewController: UIViewController {
     @IBOutlet private var editCurrencyButton: UIButton!
 
     private let basket = Basket()
-
     private let currencyConverter = CurrencyConversionController(source: .USD, currencies: [.CHF, .GBP, .EUR])
-
     private var currentCurrency: Currency = .USD
     private var currentRate: Double = 1
 
@@ -34,30 +33,7 @@ class ProductListViewController: UIViewController {
     }
 
     @IBAction func editCurrency(_ sender: Any) {
-        let actionSheet = UIAlertController(title: "Currency", message: "Select your currency", preferredStyle: .actionSheet)
-
-        Currency.allValues.forEach { currency in
-            let action = UIAlertAction(title: "\(currency.icon) - \(currency.displayName)", style: .default, handler: { (action) in
-                self.currencyConverter.value(for: currency) { (rate, error) in
-                    if let _ = error {
-                        let alert = UIAlertController(title: "Houston, We have a problem", message: "We are having trouble retriving up to date excange rates right now", preferredStyle: .alert)
-                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                        self.present(alert, animated: true, completion: nil)
-                        return
-                    }
-
-                    self.currentCurrency = currency
-                    self.currentRate = rate
-                    DispatchQueue.main.async {
-                        self.editCurrencyButton.titleLabel?.text = currency.icon
-                        self.reloadData()
-                    }
-                }
-            })
-            actionSheet.addAction(action)
-        }
-
-        present(actionSheet, animated: true, completion: nil)
+        presentCurrencyActionSheet()
     }
 
     private func reloadData() {
@@ -124,8 +100,31 @@ extension ProductListViewController: ProductListCollectionViewCellDelegate {
     }
 }
 
-extension ProductListViewController: ProductListCheckoutFooterDelegate {
-    func productListCheckoutFooterDidSelectProceedToCheckout(_: ProductListCheckoutFooter) {
+extension ProductListViewController {
+    func presentCurrencyActionSheet() {
+        let actionSheet = UIAlertController(title: "Currency", message: "Select your currency", preferredStyle: .actionSheet)
 
+        Currency.allValues.forEach { currency in
+            let action = UIAlertAction(title: "\(currency.icon) - \(currency.displayName)", style: .default, handler: { (action) in
+                self.currencyConverter.value(for: currency) { (rate, error) in
+                    if let _ = error {
+                        let alert = UIAlertController(title: "Houston, We have a problem", message: "We are having trouble retriving up to date excange rates right now", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                        return
+                    }
+
+                    self.currentCurrency = currency
+                    self.currentRate = rate
+                    DispatchQueue.main.async {
+                        self.editCurrencyButton.titleLabel?.text = currency.icon
+                        self.reloadData()
+                    }
+                }
+            })
+            actionSheet.addAction(action)
+        }
+
+        present(actionSheet, animated: true, completion: nil)
     }
 }

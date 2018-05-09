@@ -90,8 +90,8 @@ class BasketTests: XCTestCase {
         basket.add(product)
         basket.remove(product)
 
-        let numberOfProductsInBasket = basket.items.count
-        XCTAssertEqual(numberOfProductsInBasket, 0)
+        let expectation = basket.items.count
+        XCTAssertEqual(expectation, 0)
     }
 
     func testHandlesNilProductBeingRemoved() {
@@ -99,8 +99,8 @@ class BasketTests: XCTestCase {
 
         basket.remove(product)
 
-        let numberOfProductsInBasket = basket.items.count
-        XCTAssertEqual(numberOfProductsInBasket, 0)
+        let expectation = basket.items.count
+        XCTAssertEqual(expectation, 0)
     }
 
 
@@ -118,8 +118,8 @@ class BasketTests: XCTestCase {
 
         basket.removeAll()
 
-        let numberOfProductsInBasket = basket.items.count
-        XCTAssertEqual(numberOfProductsInBasket, 0)
+        let expectation = basket.items.count
+        XCTAssertEqual(expectation, 0)
     }
 
     func testTotalCalculation() {
@@ -130,6 +130,52 @@ class BasketTests: XCTestCase {
         basket.add(productTwo)
         basket.add(productTwo)
 
-        XCTAssertEqual(basket.totalPrice(), 42)
+        let expectation = basket.totalPrice()
+        XCTAssertEqual(expectation, 42)
+    }
+
+    func testQuantityForProduct() {
+        let productOne = Product(name: "one", price: 12, image: nil, size: "bag")
+
+        basket.add(productOne)
+        basket.add(productOne)
+        basket.add(productOne)
+        basket.add(productOne)
+
+        let expectation = basket.quantity(for: productOne)
+        XCTAssertEqual(expectation, 4)
+    }
+
+    func testPriceForProduct() {
+        let productOne = Product(name: "one", price: 12, image: nil, size: "bag")
+
+        basket.add(productOne)
+        basket.add(productOne)
+        basket.add(productOne)
+        basket.add(productOne)
+
+        let expectation = basket.price(for: productOne)
+        XCTAssertEqual(expectation, 48)
+    }
+
+    func testTotalQuantity() {
+        let productOne = Product(name: "one", price: 12, image: nil, size: "bag")
+        let productTwo = Product(name: "two", price: 15, image: nil, size: "slice")
+
+        basket.add(productOne)
+        basket.add(productOne)
+        basket.add(productOne)
+        basket.add(productTwo)
+        basket.add(productTwo)
+
+        let expectation = basket.totalQunatity()
+        XCTAssertEqual(expectation, 5)
+    }
+
+    func testPriceForProductButNoProductAvailable() {
+        let productOne = Product(name: "one", price: 12, image: nil, size: "bag")
+        let expectation = basket.price(for: productOne)
+        XCTAssertEqual(expectation, 0)
+
     }
 }

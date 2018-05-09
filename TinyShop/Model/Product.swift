@@ -14,8 +14,4 @@ struct Product {
     let price: Double
     let image: UIImage?
     let size: String
-
-    func displayPrice() -> String {
-        return String(format: "$%.2f", self.price)
-    }
 }

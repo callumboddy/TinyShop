@@ -7,17 +7,11 @@
 
 import UIKit
 
-protocol ProductListCheckoutFooterDelegate: class {
-    func productListCheckoutFooterDidSelectProceedToCheckout(_: ProductListCheckoutFooter)
-}
-
 final class ProductListCheckoutFooter: UIView {
     @IBOutlet var checkoutButton: UIButton!
     @IBOutlet var totalPriceLabel: UILabel!
     @IBOutlet var quantityLabel: UILabel!
 
-    private weak var delegate: ProductListCheckoutFooterDelegate?
-    
     struct State {
         let totalPrice: String
         let totalNumberOfItems: Int
@@ -36,9 +30,5 @@ final class ProductListCheckoutFooter: UIView {
         layer.shadowRadius = 2
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOpacity = 0.2
-    }
-
-    @IBAction func proceedToCheckout(_ sender: Any) {
-        delegate?.productListCheckoutFooterDidSelectProceedToCheckout(self)
     }
 }
