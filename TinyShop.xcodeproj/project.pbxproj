@@ -1,0 +1,666 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C185C11420A2C7FC00A99D7F /* ProductListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185C11320A2C7FC00A99D7F /* ProductListCollectionViewCell.swift */; };
+		C185C11A20A2CFAC00A99D7F /* ProductListCheckoutFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185C11920A2CFAC00A99D7F /* ProductListCheckoutFooter.swift */; };
+		C185C11C20A2D86F00A99D7F /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185C11B20A2D86F00A99D7F /* Currency.swift */; };
+		C185C11E20A2E93900A99D7F /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185C11D20A2E93900A99D7F /* Configuration.swift */; };
+		C185C12220A2EA1200A99D7F /* CurrencyConversionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185C12120A2EA1200A99D7F /* CurrencyConversionController.swift */; };
+		C185C12B20A2F3F500A99D7F /* PriceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185C12A20A2F3F500A99D7F /* PriceFormatter.swift */; };
+		C18A814120A1C9620013A4FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18A814020A1C9620013A4FD /* AppDelegate.swift */; };
+		C18A814320A1C9620013A4FD /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18A814220A1C9620013A4FD /* ProductListViewController.swift */; };
+		C18A814620A1C9620013A4FD /* ProductListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C18A814420A1C9620013A4FD /* ProductListViewController.storyboard */; };
+		C18A814820A1C9640013A4FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C18A814720A1C9640013A4FD /* Assets.xcassets */; };
+		C18A814B20A1C9640013A4FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C18A814920A1C9640013A4FD /* LaunchScreen.storyboard */; };
+		C18A816120A1C9650013A4FD /* TinyShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18A816020A1C9650013A4FD /* TinyShopUITests.swift */; };
+		C18A817220A1C9D00013A4FD /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18A817120A1C9D00013A4FD /* Basket.swift */; };
+		C18A817520A1D4240013A4FD /* ProductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18A817420A1D4240013A4FD /* ProductTests.swift */; };
+		C18A817720A1D42E0013A4FD /* BasketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18A817620A1D42E0013A4FD /* BasketTests.swift */; };
+		C18A817920A1D4420013A4FD /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18A817820A1D4420013A4FD /* Product.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C18A815220A1C9650013A4FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C18A813520A1C9620013A4FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C18A813C20A1C9620013A4FD;
+			remoteInfo = TinyShop;
+		};
+		C18A815D20A1C9650013A4FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C18A813520A1C9620013A4FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C18A813C20A1C9620013A4FD;
+			remoteInfo = TinyShop;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C185C11320A2C7FC00A99D7F /* ProductListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListCollectionViewCell.swift; sourceTree = "<group>"; };
+		C185C11920A2CFAC00A99D7F /* ProductListCheckoutFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListCheckoutFooter.swift; sourceTree = "<group>"; };
+		C185C11B20A2D86F00A99D7F /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		C185C11D20A2E93900A99D7F /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		C185C12120A2EA1200A99D7F /* CurrencyConversionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConversionController.swift; sourceTree = "<group>"; };
+		C185C12A20A2F3F500A99D7F /* PriceFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceFormatter.swift; sourceTree = "<group>"; };
+		C18A813D20A1C9620013A4FD /* TinyShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C18A814020A1C9620013A4FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C18A814220A1C9620013A4FD /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		C18A814520A1C9620013A4FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ProductListViewController.storyboard; sourceTree = "<group>"; };
+		C18A814720A1C9640013A4FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C18A814A20A1C9640013A4FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C18A814C20A1C9640013A4FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C18A815120A1C9650013A4FD /* TinyShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinyShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C18A815720A1C9650013A4FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C18A815C20A1C9650013A4FD /* TinyShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinyShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C18A816020A1C9650013A4FD /* TinyShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyShopUITests.swift; sourceTree = "<group>"; };
+		C18A816220A1C9650013A4FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C18A817120A1C9D00013A4FD /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
+		C18A817420A1D4240013A4FD /* ProductTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTests.swift; sourceTree = "<group>"; };
+		C18A817620A1D42E0013A4FD /* BasketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTests.swift; sourceTree = "<group>"; };
+		C18A817820A1D4420013A4FD /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C18A813A20A1C9620013A4FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C18A814E20A1C9650013A4FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C18A815920A1C9650013A4FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C185C11520A2CF1100A99D7F /* ProductListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C18A814220A1C9620013A4FD /* ProductListViewController.swift */,
+				C18A814420A1C9620013A4FD /* ProductListViewController.storyboard */,
+				C185C11620A2CF1F00A99D7F /* Views */,
+			);
+			path = ProductListViewController;
+			sourceTree = "<group>";
+		};
+		C185C11620A2CF1F00A99D7F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C185C11320A2C7FC00A99D7F /* ProductListCollectionViewCell.swift */,
+				C185C11920A2CFAC00A99D7F /* ProductListCheckoutFooter.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C185C12020A2E9F900A99D7F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C185C12120A2EA1200A99D7F /* CurrencyConversionController.swift */,
+				C185C12A20A2F3F500A99D7F /* PriceFormatter.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C185C12C20A2F9E700A99D7F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				C18A814020A1C9620013A4FD /* AppDelegate.swift */,
+				C185C11D20A2E93900A99D7F /* Configuration.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		C18A813420A1C9620013A4FD = {
+			isa = PBXGroup;
+			children = (
+				C18A813F20A1C9620013A4FD /* TinyShop */,
+				C18A815420A1C9650013A4FD /* TinyShopTests */,
+				C18A815F20A1C9650013A4FD /* TinyShopUITests */,
+				C18A813E20A1C9620013A4FD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C18A813E20A1C9620013A4FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C18A813D20A1C9620013A4FD /* TinyShop.app */,
+				C18A815120A1C9650013A4FD /* TinyShopTests.xctest */,
+				C18A815C20A1C9650013A4FD /* TinyShopUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C18A813F20A1C9620013A4FD /* TinyShop */ = {
+			isa = PBXGroup;
+			children = (
+				C185C12C20A2F9E700A99D7F /* Application */,
+				C185C12020A2E9F900A99D7F /* Controllers */,
+				C18A816F20A1C9B10013A4FD /* ViewControllers */,
+				C18A816E20A1C9A90013A4FD /* Model */,
+				C18A814720A1C9640013A4FD /* Assets.xcassets */,
+				C18A814920A1C9640013A4FD /* LaunchScreen.storyboard */,
+				C18A814C20A1C9640013A4FD /* Info.plist */,
+			);
+			path = TinyShop;
+			sourceTree = "<group>";
+		};
+		C18A815420A1C9650013A4FD /* TinyShopTests */ = {
+			isa = PBXGroup;
+			children = (
+				C18A815720A1C9650013A4FD /* Info.plist */,
+				C18A817420A1D4240013A4FD /* ProductTests.swift */,
+				C18A817620A1D42E0013A4FD /* BasketTests.swift */,
+			);
+			path = TinyShopTests;
+			sourceTree = "<group>";
+		};
+		C18A815F20A1C9650013A4FD /* TinyShopUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C18A816020A1C9650013A4FD /* TinyShopUITests.swift */,
+				C18A816220A1C9650013A4FD /* Info.plist */,
+			);
+			path = TinyShopUITests;
+			sourceTree = "<group>";
+		};
+		C18A816E20A1C9A90013A4FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C18A817120A1C9D00013A4FD /* Basket.swift */,
+				C18A817820A1D4420013A4FD /* Product.swift */,
+				C185C11B20A2D86F00A99D7F /* Currency.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C18A816F20A1C9B10013A4FD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C185C11520A2CF1100A99D7F /* ProductListViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C18A813C20A1C9620013A4FD /* TinyShop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C18A816520A1C9650013A4FD /* Build configuration list for PBXNativeTarget "TinyShop" */;
+			buildPhases = (
+				C18A813920A1C9620013A4FD /* Sources */,
+				C18A813A20A1C9620013A4FD /* Frameworks */,
+				C18A813B20A1C9620013A4FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TinyShop;
+			productName = TinyShop;
+			productReference = C18A813D20A1C9620013A4FD /* TinyShop.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C18A815020A1C9650013A4FD /* TinyShopTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C18A816820A1C9650013A4FD /* Build configuration list for PBXNativeTarget "TinyShopTests" */;
+			buildPhases = (
+				C18A814D20A1C9650013A4FD /* Sources */,
+				C18A814E20A1C9650013A4FD /* Frameworks */,
+				C18A814F20A1C9650013A4FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C18A815320A1C9650013A4FD /* PBXTargetDependency */,
+			);
+			name = TinyShopTests;
+			productName = TinyShopTests;
+			productReference = C18A815120A1C9650013A4FD /* TinyShopTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C18A815B20A1C9650013A4FD /* TinyShopUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C18A816B20A1C9650013A4FD /* Build configuration list for PBXNativeTarget "TinyShopUITests" */;
+			buildPhases = (
+				C18A815820A1C9650013A4FD /* Sources */,
+				C18A815920A1C9650013A4FD /* Frameworks */,
+				C18A815A20A1C9650013A4FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C18A815E20A1C9650013A4FD /* PBXTargetDependency */,
+			);
+			name = TinyShopUITests;
+			productName = TinyShopUITests;
+			productReference = C18A815C20A1C9650013A4FD /* TinyShopUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C18A813520A1C9620013A4FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					C18A813C20A1C9620013A4FD = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					C18A815020A1C9650013A4FD = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = C18A813C20A1C9620013A4FD;
+					};
+					C18A815B20A1C9650013A4FD = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = C18A813C20A1C9620013A4FD;
+					};
+				};
+			};
+			buildConfigurationList = C18A813820A1C9620013A4FD /* Build configuration list for PBXProject "TinyShop" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C18A813420A1C9620013A4FD;
+			productRefGroup = C18A813E20A1C9620013A4FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C18A813C20A1C9620013A4FD /* TinyShop */,
+				C18A815020A1C9650013A4FD /* TinyShopTests */,
+				C18A815B20A1C9650013A4FD /* TinyShopUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C18A813B20A1C9620013A4FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C18A814B20A1C9640013A4FD /* LaunchScreen.storyboard in Resources */,
+				C18A814820A1C9640013A4FD /* Assets.xcassets in Resources */,
+				C18A814620A1C9620013A4FD /* ProductListViewController.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C18A814F20A1C9650013A4FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C18A815A20A1C9650013A4FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C18A813920A1C9620013A4FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C185C11A20A2CFAC00A99D7F /* ProductListCheckoutFooter.swift in Sources */,
+				C18A817220A1C9D00013A4FD /* Basket.swift in Sources */,
+				C185C12B20A2F3F500A99D7F /* PriceFormatter.swift in Sources */,
+				C18A817920A1D4420013A4FD /* Product.swift in Sources */,
+				C185C11420A2C7FC00A99D7F /* ProductListCollectionViewCell.swift in Sources */,
+				C18A814320A1C9620013A4FD /* ProductListViewController.swift in Sources */,
+				C185C11C20A2D86F00A99D7F /* Currency.swift in Sources */,
+				C185C11E20A2E93900A99D7F /* Configuration.swift in Sources */,
+				C18A814120A1C9620013A4FD /* AppDelegate.swift in Sources */,
+				C185C12220A2EA1200A99D7F /* CurrencyConversionController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C18A814D20A1C9650013A4FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C18A817720A1D42E0013A4FD /* BasketTests.swift in Sources */,
+				C18A817520A1D4240013A4FD /* ProductTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C18A815820A1C9650013A4FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C18A816120A1C9650013A4FD /* TinyShopUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C18A815320A1C9650013A4FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C18A813C20A1C9620013A4FD /* TinyShop */;
+			targetProxy = C18A815220A1C9650013A4FD /* PBXContainerItemProxy */;
+		};
+		C18A815E20A1C9650013A4FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C18A813C20A1C9620013A4FD /* TinyShop */;
+			targetProxy = C18A815D20A1C9650013A4FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C18A814420A1C9620013A4FD /* ProductListViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C18A814520A1C9620013A4FD /* Base */,
+			);
+			name = ProductListViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		C18A814920A1C9640013A4FD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C18A814A20A1C9640013A4FD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C18A816320A1C9650013A4FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C18A816420A1C9650013A4FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C18A816620A1C9650013A4FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TinyShop/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.callumboddy.TinyShop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C18A816720A1C9650013A4FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TinyShop/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.callumboddy.TinyShop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C18A816920A1C9650013A4FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TinyShopTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.callumboddy.TinyShopTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TinyShop.app/TinyShop";
+			};
+			name = Debug;
+		};
+		C18A816A20A1C9650013A4FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TinyShopTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.callumboddy.TinyShopTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TinyShop.app/TinyShop";
+			};
+			name = Release;
+		};
+		C18A816C20A1C9650013A4FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TinyShopUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.callumboddy.TinyShopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TinyShop;
+			};
+			name = Debug;
+		};
+		C18A816D20A1C9650013A4FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TinyShopUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.callumboddy.TinyShopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TinyShop;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C18A813820A1C9620013A4FD /* Build configuration list for PBXProject "TinyShop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C18A816320A1C9650013A4FD /* Debug */,
+				C18A816420A1C9650013A4FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C18A816520A1C9650013A4FD /* Build configuration list for PBXNativeTarget "TinyShop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C18A816620A1C9650013A4FD /* Debug */,
+				C18A816720A1C9650013A4FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C18A816820A1C9650013A4FD /* Build configuration list for PBXNativeTarget "TinyShopTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C18A816920A1C9650013A4FD /* Debug */,
+				C18A816A20A1C9650013A4FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C18A816B20A1C9650013A4FD /* Build configuration list for PBXNativeTarget "TinyShopUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C18A816C20A1C9650013A4FD /* Debug */,
+				C18A816D20A1C9650013A4FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C18A813520A1C9620013A4FD /* Project object */;
+}
