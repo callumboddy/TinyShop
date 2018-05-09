@@ -38,11 +38,18 @@ class ProductListViewController: UIViewController {
 
         Currency.allValues.forEach { currency in
             let action = UIAlertAction(title: "\(currency.icon) - \(currency.displayName)", style: .default, handler: { (action) in
-                self.editCurrencyButton.titleLabel?.text = currency.icon
-                self.currentCurrency = currency
-                self.currencyConverter.value(for: self.currentCurrency) { (rate, error) in
+                self.currencyConverter.value(for: currency) { (rate, error) in
+                    if let _ = error {
+                        let alert = UIAlertController(title: "Houston, We have a problem", message: "We are having trouble retriving up to date excange rates right now", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                        return
+                    }
+
+                    self.currentCurrency = currency
                     self.currentRate = rate
                     DispatchQueue.main.async {
+                        self.editCurrencyButton.titleLabel?.text = currency.icon
                         self.reloadData()
                     }
                 }

@@ -27,7 +27,8 @@ class CurrencyConversionController {
     init(source: Currency, currencies: [Currency]) {
         self.urlComponents = URLComponents()
         self.source = source
-        self.currencies = currencies
+        let availableCurrencies = currencies + [source]
+        self.currencies = availableCurrencies
     }
 
     // MARK: Public Methods

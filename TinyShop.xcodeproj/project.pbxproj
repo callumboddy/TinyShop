@@ -120,6 +120,15 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		C185C12C20A2F9E700A99D7F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				C18A814020A1C9620013A4FD /* AppDelegate.swift */,
+				C185C11D20A2E93900A99D7F /* Configuration.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
 		C18A813420A1C9620013A4FD = {
 			isa = PBXGroup;
 			children = (
@@ -143,10 +152,10 @@
 		C18A813F20A1C9620013A4FD /* TinyShop */ = {
 			isa = PBXGroup;
 			children = (
+				C185C12C20A2F9E700A99D7F /* Application */,
 				C185C12020A2E9F900A99D7F /* Controllers */,
 				C18A816F20A1C9B10013A4FD /* ViewControllers */,
 				C18A816E20A1C9A90013A4FD /* Model */,
-				C18A814020A1C9620013A4FD /* AppDelegate.swift */,
 				C18A814720A1C9640013A4FD /* Assets.xcassets */,
 				C18A814920A1C9640013A4FD /* LaunchScreen.storyboard */,
 				C18A814C20A1C9640013A4FD /* Info.plist */,
@@ -179,7 +188,6 @@
 				C18A817120A1C9D00013A4FD /* Basket.swift */,
 				C18A817820A1D4420013A4FD /* Product.swift */,
 				C185C11B20A2D86F00A99D7F /* Currency.swift */,
-				C185C11D20A2E93900A99D7F /* Configuration.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
