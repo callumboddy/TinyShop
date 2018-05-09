@@ -84,8 +84,12 @@ class CurrencyConversionController {
 
 
         URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
-            let conversion = try? JSONDecoder().decode(Conversion.self, from: data!)
-            self.quotes = conversion?.quotes
+            guard let data = data, let conversion = try? JSONDecoder().decode(Conversion.self, from: data) else {
+                completion(nil, error)
+                return
+            }
+
+            self.quotes = conversion.quotes
             completion(conversion, error)
         }.resume()
     }

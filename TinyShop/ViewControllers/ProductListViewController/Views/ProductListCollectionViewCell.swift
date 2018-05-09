@@ -60,7 +60,6 @@ class ProductListCollectionViewCell: UICollectionViewCell {
         delegate?.productListCollectionViewCellDidSelectQuantityIncrease(self)
     }
 
-
     @IBAction func increaseQuantity(_ sender: Any) {
         delegate?.productListCollectionViewCellDidSelectQuantityIncrease(self)
     }

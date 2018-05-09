@@ -13,6 +13,9 @@
 		C185C11E20A2E93900A99D7F /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185C11D20A2E93900A99D7F /* Configuration.swift */; };
 		C185C12220A2EA1200A99D7F /* CurrencyConversionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185C12120A2EA1200A99D7F /* CurrencyConversionController.swift */; };
 		C185C12B20A2F3F500A99D7F /* PriceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185C12A20A2F3F500A99D7F /* PriceFormatter.swift */; };
+		C185C12E20A3111400A99D7F /* PriceFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185C12D20A3111400A99D7F /* PriceFormatterTests.swift */; };
+		C185C13020A3112000A99D7F /* CurrencyConversionControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185C12F20A3112000A99D7F /* CurrencyConversionControllerTests.swift */; };
+		C185C13820A3119200A99D7F /* CurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185C13720A3119200A99D7F /* CurrencyTests.swift */; };
 		C18A814120A1C9620013A4FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18A814020A1C9620013A4FD /* AppDelegate.swift */; };
 		C18A814320A1C9620013A4FD /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18A814220A1C9620013A4FD /* ProductListViewController.swift */; };
 		C18A814620A1C9620013A4FD /* ProductListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C18A814420A1C9620013A4FD /* ProductListViewController.storyboard */; };
@@ -49,6 +52,9 @@
 		C185C11D20A2E93900A99D7F /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		C185C12120A2EA1200A99D7F /* CurrencyConversionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConversionController.swift; sourceTree = "<group>"; };
 		C185C12A20A2F3F500A99D7F /* PriceFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceFormatter.swift; sourceTree = "<group>"; };
+		C185C12D20A3111400A99D7F /* PriceFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceFormatterTests.swift; sourceTree = "<group>"; };
+		C185C12F20A3112000A99D7F /* CurrencyConversionControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConversionControllerTests.swift; sourceTree = "<group>"; };
+		C185C13720A3119200A99D7F /* CurrencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTests.swift; sourceTree = "<group>"; };
 		C18A813D20A1C9620013A4FD /* TinyShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C18A814020A1C9620013A4FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C18A814220A1C9620013A4FD /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +175,9 @@
 				C18A815720A1C9650013A4FD /* Info.plist */,
 				C18A817420A1D4240013A4FD /* ProductTests.swift */,
 				C18A817620A1D42E0013A4FD /* BasketTests.swift */,
+				C185C12D20A3111400A99D7F /* PriceFormatterTests.swift */,
+				C185C12F20A3112000A99D7F /* CurrencyConversionControllerTests.swift */,
+				C185C13720A3119200A99D7F /* CurrencyTests.swift */,
 			);
 			path = TinyShopTests;
 			sourceTree = "<group>";
@@ -348,6 +357,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C18A817720A1D42E0013A4FD /* BasketTests.swift in Sources */,
+				C185C12E20A3111400A99D7F /* PriceFormatterTests.swift in Sources */,
+				C185C13820A3119200A99D7F /* CurrencyTests.swift in Sources */,
+				C185C13020A3112000A99D7F /* CurrencyConversionControllerTests.swift in Sources */,
 				C18A817520A1D4240013A4FD /* ProductTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
