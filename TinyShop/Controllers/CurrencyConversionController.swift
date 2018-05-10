@@ -14,25 +14,34 @@ enum CurrencyConversionError: Error {
 
 class CurrencyConversionController {
 
-    // MARK: Properties
-
-    private var urlComponents: URLComponents
+    /// The base currency to compare other currencies against
     private let source: Currency
+
+
+    /// The array of currencies that this instance is able to compare against
     private let currencies: [Currency]
 
+
+    /// The set of values that represent the exchange rates for each currency.
     private(set) var quotes: Quotes?
 
-    // MARK: Initializers
-
+    /// creates an instance of a currency converter object given a base currency & an array of target currencies
+    ///
+    /// - Parameters:
+    ///   - source: the base currency to compare against
+    ///   - currencies: an array of other currencies that you wish to get the exchange rate for.
     init(source: Currency, currencies: [Currency]) {
-        self.urlComponents = URLComponents()
         self.source = source
         let availableCurrencies = currencies + [source]
         self.currencies = availableCurrencies
     }
 
-    // MARK: Public Methods
 
+    /// retrieves the exchange rate value for a particular currency against the instances base currency.
+    ///
+    /// - Parameters:
+    ///   - currency: the currency you wish to get th exchange rate for
+    ///   - completion: returns the value of the exhange rate & an error.
     func value(for currency: Currency, completion: @escaping (Double, CurrencyConversionError?) -> Void) {
 
         // ensure this instace is capable of the required conversion
@@ -68,7 +77,11 @@ class CurrencyConversionController {
 
     // MARK: Private Methods
 
+    // TODO: Networking is tightly coupled to this object - to keep it lean, as it is the only required networking for now. Look to abstract this into a more generic networking stack.
+
     private func request(completion: @escaping (Conversion?, Error?) -> Void) {
+        var urlComponents: URLComponents = URLComponents()
+
         urlComponents.scheme = "http"
         urlComponents.host = "apilayer.net"
         urlComponents.path = "/api/live"
